@@ -9,7 +9,25 @@
 <!-- <script type="text/javascript" src="https://web.archive.org/static/js/analytics.js"></script> -->
 <!-- <script type="text/javascript">archive_analytics.values.server_name="wwwb-app17.us.archive.org";archive_analytics.values.server_ms=208;</script>
 <link type="text/css" rel="stylesheet" href="https://web.archive.org/static/css/banner-styles.css"/> -->
+<script async src="https://apps.bazaarvoice.com/deployments/test-garlic/main_site/staging/en_US/bv.js"></script>
 
+<script>
+window.bvCallback = function (BV) {
+  BV.pixel.trackTransaction({
+    "currency" : "value",
+    "orderId" : "value",
+    "total" : "value",
+    "items" : [
+      {
+        "price" : "value",
+        "quantity" : "value",
+        "sku" : "value",
+        "optional_item_parameter" : "value"
+      },
+    ],
+  });
+};
+</script>
 
 
   <link rel="shortcut icon" href="./static/logo.png" type="image/png" />
