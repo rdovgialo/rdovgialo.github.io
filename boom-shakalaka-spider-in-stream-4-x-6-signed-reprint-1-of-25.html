@@ -10,17 +10,13 @@
 
 <script>
   var button = document.getElementById("add-to-cart");
-  button.onclick = function(){
-
-      window.bvCallback = function (BV) {
+  button.onclick = function(){};
+  window.bvCallback = function (BV) {
       BV.pixel.trackConversion({
         "type" : "purchase",
         "label" : "00001",
         "value" : "10.00"
-      });
-      };
-
-    console.log("THIS HAPPENS AFTER PIXEL");
+    });
   };
 
 </script>
