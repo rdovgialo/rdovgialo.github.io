@@ -11,6 +11,22 @@
 <link type="text/css" rel="stylesheet" href="https://web.archive.org/static/css/banner-styles.css"/> -->
 <script async src="https://apps.bazaarvoice.com/deployments/test-garlic/main_site/staging/en_US/bv.js"></script>
 
+<script>
+window.bvCallback = function (BV) {
+  BV.pixel.trackTransaction({
+    "currency" : "USD",
+    "orderId" : "00023",
+    "total" : "130",
+    "items" : [
+      {
+        "price" : "130",
+        "quantity" : "1",
+        "sku" : "000123",
+      },
+    ],
+  });
+};
+</script>
 
 
   <link rel="shortcut icon" href="./static/logo.png" type="image/png" />
