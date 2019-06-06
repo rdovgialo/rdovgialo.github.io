@@ -42,7 +42,8 @@ xhr.onreadystatechange = function(){
 
 xhr.open('GET', 'https://stg.api.bazaarvoice.com/data/reviews.json?ApiVersion=5.4&passkey=caBcpJkIkWj7XjoAJaPNuoaQM48BmGb6rMt5KoSgv7Jkg&Filter=productId:00002', true);
 xhr.onload = function(){
-  console.log(xhr.responseText)
+  var data = JSON.parse(xhr.responseText)
+  console.log(data.Results[0].Id)
 }
 
 xhr.send()
