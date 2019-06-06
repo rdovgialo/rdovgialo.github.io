@@ -35,7 +35,7 @@ btn.addEventListener('click', function(){
   xhr.open('GET', 'https://stg.api.bazaarvoice.com/data/reviews.json?ApiVersion=5.4&passkey=caBcpJkIkWj7XjoAJaPNuoaQM48BmGb6rMt5KoSgv7Jkg&Filter=productId:00002', true);
   xhr.onload = function(){
     var data = JSON.parse(xhr.responseText);
-    render(data);
+    render(data.Results[0]);
   };
   xhr.send();
 
