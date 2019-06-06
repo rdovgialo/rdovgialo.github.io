@@ -36,8 +36,8 @@ btn.addEventListener('click', funcktion() {
   xhr.onload = function(){
     var data = JSON.parse(xhr.responseText);
     render(data);
-  }
-  xhr.send()
+  };
+  xhr.send();
 });
 
 function render(data) {
