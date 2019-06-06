@@ -38,6 +38,13 @@ btn.addEventListener('click', function(){
     render(data);
   };
   xhr.send();
+
+  const post = new XMLHttpRequest()
+  post.open('POST','https://stg.api.bazaarvoice.com/data/submitreview.json?ApiVersion=5.4&passkey=caBcpJkIkWj7XjoAJaPNuoaQM48BmGb6rMt5KoSgv7Jkg&Action=submit&Rating=5&ReviewText=TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST &Title=Second+Best+Review+posted&UserNickname=Max0815&AgreedToTermsAndConditions=True&HostedAuthentication_CallbackUrl=https://rdovgialo.github.io/&HostedAuthentication_AuthenticationEmail=ricardas.dovgialo@bazaarvoice.com&ProductId=00002',true);
+  post.send()
+
+  console.log('sent')
+
 });
 
 function render(data) {
@@ -46,9 +53,6 @@ function render(data) {
 
 
 
-const post = new XMLHttpRequest()
-post.open('POST','https://stg.api.bazaarvoice.com/data/submitreview.json?ApiVersion=5.4&passkey=caBcpJkIkWj7XjoAJaPNuoaQM48BmGb6rMt5KoSgv7Jkg&Action=submit&Rating=5&ReviewText=TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST &Title=Second+Best+Review+posted&UserNickname=Max0815&AgreedToTermsAndConditions=True&HostedAuthentication_CallbackUrl=https://rdovgialo.github.io/&HostedAuthentication_AuthenticationEmail=ricardas.dovgialo@bazaarvoice.com&ProductId=00002',true);
-post.send()
 
 
 
