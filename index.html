@@ -27,13 +27,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 const xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
-  if (xhr.readystate == 4){
-    if (xhr.status == 200){
-      var x = JSON.parse(xhr.responseText)
-      console.log(x);
-    }
-    if(xhr.status == 404){
-      console.log("not found")
+  if (xhr.readystate == 4 && xhr.status == 200){
+      console.log(xhr.responseText);
+
     }
   }
 
