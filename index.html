@@ -30,7 +30,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 var place = document.getElementById('placeholder')
 
 var btn = document.getElementById('button');
-btn.addEventListener('click', funcktion(){
+btn.addEventListener('click', function(){
   const xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://stg.api.bazaarvoice.com/data/reviews.json?ApiVersion=5.4&passkey=caBcpJkIkWj7XjoAJaPNuoaQM48BmGb6rMt5KoSgv7Jkg&Filter=productId:00002', true);
   xhr.onload = function(){
