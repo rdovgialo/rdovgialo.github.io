@@ -25,8 +25,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <script>
-var request = new XMLHttpRequest();
-request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
+const xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function(){
+  if (xhr.readystate == 4){
+    if (xhr.status == 200){
+      console.log(xhr.responseText);
+    }
+    if(xhr.status == 404){
+      console.log("not found")
+    }
+  }
+
+};
+
+xhr.open('GET', 'https://stg.api.bazaarvoice.com/data/reviews.json?ApiVersion=5.4&passkey=caBcpJkIkWj7XjoAJaPNuoaQM48BmGb6rMt5KoSgv7Jkg&Filter=productId:00002', true)
 </script>
 
   </body>
