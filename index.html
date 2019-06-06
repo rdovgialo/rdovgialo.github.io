@@ -29,17 +29,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 const xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
-  if (xhr.readystate == 4 && xhr.status == 200){
+  if (xhr.readystate == 4){
+    if (xhr.status == 200){
       console.log(xhr.responseText);
+    }
+    if(xhr.status == 404){
+      console.log("not found")
+    }
   }
 
 };
 
 xhr.open('GET', 'https://stg.api.bazaarvoice.com/data/reviews.json?ApiVersion=5.4&passkey=caBcpJkIkWj7XjoAJaPNuoaQM48BmGb6rMt5KoSgv7Jkg&Filter=productId:00002', true);
-xhr.onload = function(){
-  console.log()
-};
+xhr.onload = (){
+  console.log(xhr.responseText)
+}
+
 xhr.send()
+
+
+
 </script>
 
   </body>
