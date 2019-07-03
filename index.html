@@ -19,44 +19,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P876GGL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<H1>TEST PAGE</H1>
-<button id='button'>This is a button</button>
-<div id='placeholder'></div>
-<script>
-var place = document.getElementById('placeholder')
 
-var btn = document.getElementById('button');
-btn.addEventListener('click', function(){
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://stg.api.bazaarvoice.com/data/reviews.json?ApiVersion=5.4&passkey=caBcpJkIkWj7XjoAJaPNuoaQM48BmGb6rMt5KoSgv7Jkg&Filter=productId:00002', true);
-  xhr.onload = function(){
-    var data = JSON.parse(xhr.responseText);
-    render(data.Results[0].ReviewText);
-  };
-  xhr.send();
+<script type="text/javascript" src="https://display.ugc.bazaarvoice.com/static/pacificpeche-fr/fr_FR/bvapi.js"></script>
+<script type="text/javascript">
+        // Normally this would go on the bottom of the page but is placed here for your convenience.
+        BVWidgets.display({
+            // "productId": 'some_product_id', // Change this to a valid product ID with content to see that product's content.
+                                                // By default this implementation will pull in all content.
+        })
+    </script>
 
-  const post = new XMLHttpRequest()
-  post.open('POST','https://stg.api.bazaarvoice.com/data/submitreview.json?ApiVersion=5.4&PassKey=ca1EJ3PSdv58erTRwwW4IXsbZ4FhKdc9AtXqFnfy0fNE8&ProductId=0001&Action=submit&Rating=5&ReviewText=TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST &Title=Second+Best+Review+posted&AgreedToTermsAndConditions=true&HostedAuthentication_CallbackUrl=https://rdovgialo.github.io/&HostedAuthentication_AuthenticationEmail=ricardas.dovgialo@bazaarvoice.com&UserNickname=Max0815&locale=en_GB',true);
-  post.send()
-
-  console.log('sent')
-
-});
-
-function render(data) {
-  place.insertAdjacentHTML('beforeend', data)
-};
-
-
-
-
-
-
-</script>
+    <div id="bv-carousel"></div>
 
   </body>
 </html>
