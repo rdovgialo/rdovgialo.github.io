@@ -3,6 +3,16 @@
 <head>
 	<title>test page</title>
 	<script async src="https://apps.bazaarvoice.com/deployments/lampenwelt-de/main_site/staging/de_DE/bv.js"></script>
+
+
+	<script src="//static.curations.bazaarvoice.com/gallery/lampenwelt-de/prod/loader.js"></script>
+<script type="text/javascript">
+BVWidgets.display(
+  {
+    "display": 'homepage'
+  }
+);
+</script>
 </head>
 <body>
 	
@@ -13,6 +23,8 @@
 	<div data-bv-show="rating_summary" data-bv-product-id="1001002"></div>
 	<spam>CURATIONS</spam>
 	<div data-bv-show="curations" data-bv-display-tag="homepage"></div>
+	<spam>LEGACY CODE</spam>
+	<div id="BV_CURRATIONS"></div>
 
 </body>
 </html>
